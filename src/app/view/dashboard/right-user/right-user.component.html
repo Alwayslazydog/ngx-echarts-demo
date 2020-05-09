@@ -1,0 +1,16 @@
+<div class="bg">
+    <div class="green-title"><span class="icon-circle"></span><p>住客用户画像</p></div>
+    <div class="gender" *ngIf="genderData.length">
+        <div class="flex-row flex-between">
+            <div class="text"><span class="margin-r">{{genderData[0].type}}</span><span>{{ genderData[0].value | genderCalcPercent: (genderData[0].value + genderData[1].value) }}</span></div>
+            <div class="text"><span class="margin-r">{{genderData[1].type}}</span><span>{{ genderData[1].value | genderCalcPercent: (genderData[0].value + genderData[1].value) }}</span></div>
+        </div>
+        <div class="flex-row gender-line">
+            <div class="gender-item male" [ngStyle]="{'width':genderData[0].value | genderCalcPercent: (genderData[0].value + genderData[1].value)}"></div>
+            <div class="gender-item female" [ngStyle]="{'width':genderData[1].value | genderCalcPercent: (genderData[0].value + genderData[1].value)}"></div>
+        </div>
+    </div>
+    <div class="pie">
+        <div echarts [options]="options" (chartInit)="onChartInit($event)" class="demo-chart"></div>
+    </div>
+</div>

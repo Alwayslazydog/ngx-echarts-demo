@@ -1,1 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
+div,p {
+    margin: 0;
+}
+p, span{
+    display: inline;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    // width: 100%;
+}
+.flex-between{
+    justify-content: space-between;
+}
+.nowrap{
+    flex-wrap: nowrap;
+}
+.green-title{
+    font-size:16px;
+    font-family:HiraginoSansGB-W6,HiraginoSansGB;
+    font-weight:normal;
+    color:rgba(69,245,230,1);
+    line-height:50px;
+    text-shadow:0px 2px 8px rgba(68,215,195,0.56);
+    margin: 0 16px
+}
+.icon-circle{
+    width:8px;
+    height:8px;
+    box-shadow:0px 2px 4px 0px rgba(68,215,195,0.56);
+    border:1px solid rgba(68,215,195,1);
+    margin-right: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.bg{
+    margin-right: 24px;
+}
+.text{
+    font-size:12px;
+    font-family:HiraginoSansGB-W3,HiraginoSansGB;
+    font-weight:normal;
+    color:rgba(184,255,245,1);
+    line-height:18px;
+}
+.flex-end{
+    justify-content: flex-end;
+}
+.flex-around{
+    justify-content: space-around;
+}
+.flex-column{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.flex-end-item{
+    align-self: flex-end;
+    justify-self: flex-end;
+    
+    margin: 0 auto ;
+}
+
+.up-arrow{
+    width:0; 
+    height:0; 
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-bottom:5px solid #29CC96;
+    text-align: center;
+    margin: auto 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.down-arrow{
+    width:0; 
+    height:0; 
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #F57E7E;
+    text-align: center;
+    margin: auto 5px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}

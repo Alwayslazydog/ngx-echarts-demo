@@ -1,0 +1,29 @@
+.nav-header{
+    margin: 0;
+    background-image: url('./../../../../assets/background/header-background.png');
+    background-size: 100% 100%;
+    background-repeat: none;
+    height: 88px;
+    color: #fff;
+    text-align: center;
+    font-family:PingFangSC-Medium,PingFang SC;
+    .main-title{
+        font-weight:500;
+        color:rgba(69,245,230,1);
+        line-height:45px;
+        letter-spacing:7px;
+        text-shadow:0px 2px 12px rgba(69,219,199,0.56);
+        font-size: 32px;
+        margin: 0;
+        display: block;
+    }
+    .second-title{
+        color: rgba(69,245,230,.56);
+        text-shadow:0px 2px 12px rgba(69,219,199,0.56);
+        font-size: 12px;
+        letter-spacing:4px;
+        line-height:17px;
+        font-weight:500;
+        display: block;
+    }
+}

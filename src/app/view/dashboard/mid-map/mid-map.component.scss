@@ -1,0 +1,92 @@
+.title{
+    margin-top: 25px;
+    width: 100%;
+    display: block;
+}
+.green-title{
+    margin: 0;
+}
+.border-green{
+    width: 100%;
+    height:1px;
+    background-image: linear-gradient(90deg,rgba(68,215,195,.4) 0%,rgba(68,215,195,1) 51%,rgba(68,215,195,0.16) 100%);
+    border-bottom-color: linear-gradient(90deg,rgba(68,215,195,.4) 0%,rgba(68,215,195,1) 51%,rgba(68,215,195,0.16) 100%);
+    display: block;
+    // opacity:0.4;
+}
+.bg{
+    margin: 0 16px;
+}
+.demo-chart{
+    width: 100%;
+}
+.data-list{
+    margin: 34px 0;
+}
+.data-item{
+}
+
+.item-text{
+    width:56px;
+    font-size:14px;
+    font-family:HiraginoSansGB-W3,HiraginoSansGB;
+    font-weight:normal;
+    color:rgba(92,255,233,1);
+    line-height:21px;
+    text-emphasis: none;
+    white-space: nowrap;
+    text-shadow:0px 2px 8px rgba(68,215,195,0.56);
+}
+.item-data{
+    width:91px;
+    font-size:26px;
+    font-family:DIN-Medium,DIN;
+    font-weight:500;
+    color:rgba(68,215,195,1);
+    line-height:31px;
+}
+.house{
+    width: 30px;
+    height: 30px;
+    margin: auto 15px auto 0;
+    background-size: 100%;
+    display: block;
+    background-image: url(../../../../assets/icon/house.png);
+}
+.room{
+    width: 30px;
+    height: 30px;
+    margin: auto 15px auto 0;
+    background-size: 100%;
+    display: block;
+    background-image: url(../../../../assets/icon/room.png);
+}
+.door{
+    width: 30px;
+    height: 30px;
+    margin: auto 15px auto 0;
+    background-size: 100%;
+    display: block;
+    background-image: url(../../../../assets/icon/door.png);
+}
+.green-dot{
+    margin-top: 8px;
+    background-image: url(../../../../assets/background/green-dot.png);
+    background-size: 100%;
+    display: block;
+    width: 33px;
+    height: 4px;
+    animation: twinkle 1.5s infinite;
+}
+
+@keyframes twinkle {
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

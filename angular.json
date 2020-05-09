@@ -30,7 +30,12 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/echarts/dist/echarts.min.js",
+              "./node_modules/echarts/map/js/china.js",
+              "./node_modules/echarts/map/js/province/guangdong.js",
+              "./node_modules/echarts/dist/extension/bmap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +128,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Jniao-data"
+    }
+  },
+  "defaultProject": "Jniao-data",
+  "cli": {
+    "analytics": "6d6b2427-13db-4508-883c-d9539ee4b119"
+  }
 }

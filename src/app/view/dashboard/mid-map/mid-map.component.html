@@ -1,0 +1,22 @@
+<div class="title">
+    <div class="head">
+        <div class="green-title flex-row flex-between">
+            <div><span class="icon-circle"></span><p>广东省民宿接入概况</p></div>
+            <div><span>{{nowTime | date:'yyyy-MM-dd HH:mm:ss'}}</span></div>
+        </div>
+        <div class="border-green"></div>
+        <i class="green-dot"></i>
+    </div>
+    <div class="flex-column">
+        <div class="data-list flex-row flex-around">
+            <div class="date-item flex-row " *ngFor="let item of dashData">
+                <i [class]="item.icon"></i>
+                <div class="flex-column">
+                    <div class="item-text">{{item.name}}</div>
+                    <div class="item-data">{{item.value}}</div>
+                </div>
+            </div>
+        </div>    
+        <div echarts [options]="options" (chartInit)="onChartInit($event)" height="450" class="demo-chart" id="guangdongMap"></div>
+    </div>
+</div>

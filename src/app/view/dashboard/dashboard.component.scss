@@ -1,0 +1,22 @@
+.main-background-color{
+    background-color: #45F5E6;
+}
+.left{
+    width: 27.9%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.right{
+    width: 27.9%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.middle{
+    width: 44.2%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding: 0 16px;
+}

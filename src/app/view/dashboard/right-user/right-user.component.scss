@@ -1,0 +1,29 @@
+.bg{
+    width: 100%;
+    height: 498px;
+    background-image: url('./../../../../assets/background/right-user.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    // margin-bottom:15px;
+}
+.gender{
+    padding: 74px 100px 0;
+    font-size:12px;
+    font-family:HiraginoSansGB-W3,HiraginoSansGB;
+    font-weight:normal;
+    color:rgba(184,255,245,1);
+    line-height:18px;
+}
+.gender-line{
+    height:16px;
+    margin-top: 12px;
+    width: 100%;
+}
+.male{
+    background-color: #50D5A9;
+    border-radius:4px 0px 0px 4px;
+}
+.female{
+    background-color: #F57E7E;
+    border-radius: 0px 4px 4px 0px;
+}

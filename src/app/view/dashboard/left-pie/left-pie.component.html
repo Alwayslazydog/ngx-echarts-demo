@@ -1,0 +1,11 @@
+<div class="bg">
+    <div class="green-title"><span class="icon-circle"></span><p>广东省民宿接入概况</p></div>
+    <div class="flex-row flex-between">
+        <ul class=" flex-align-end padding-bottom">
+            <li class="legend"  [style]="'color:'+item.color" *ngFor="let item of options.legend.data">
+                <span class="text">{{item.name}}</span>
+            </li>
+        </ul>
+        <div echarts [options]="options" (chartInit)="onChartInit($event)" class="demo-chart"></div>
+    </div>
+</div>

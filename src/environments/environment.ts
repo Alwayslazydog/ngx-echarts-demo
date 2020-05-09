@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'http://192.168.0.128:8081/boss-manage-api/app/',
+  status: 1
 };
 
 /*

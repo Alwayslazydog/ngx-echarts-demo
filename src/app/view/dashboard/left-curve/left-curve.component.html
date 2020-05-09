@@ -1,0 +1,9 @@
+<div class="bg">
+    <div class="green-title"><span class="icon-circle"></span><p>近7天房客入住与认证人数</p></div>
+        <ul class="flex-row flex-end">
+            <li [style]="'color:'+item.color" *ngFor="let item of options.series">
+                <span class="text">{{item.name}}</span>
+            </li>
+        </ul>
+    <div echarts [options]="options" [loading]="isLoading"  (chartInit)="onChartInit($event)" theme="macarons" class="demo-chart"></div>
+</div>
