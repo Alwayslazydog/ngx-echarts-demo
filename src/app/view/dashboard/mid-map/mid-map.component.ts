@@ -17,6 +17,7 @@ export class MidMapComponent implements OnInit {
   chartOption: any
   echartsIntance:any
   dataList: Array<any>
+  dataValue: Array<any>
 
   constructor(
     private http: HttpClient,
@@ -54,6 +55,9 @@ export class MidMapComponent implements OnInit {
              item.selected = item.selected == 1 ? true : false
              return item
           })
+          this.dataValue = res.data.map(item => {
+            return item.value
+          })
           this.mapInit()
       })
   }
@@ -67,8 +71,9 @@ export class MidMapComponent implements OnInit {
             type: 'continuous', // 定义为连续型 visualMap
             id:'guangdongMap',
             dimension: 0,
-            max: 32000,
+            max:  Math.max(...this.dataValue),
             min: 0,
+            rang:[0, Math.max(...this.dataValue)],
             calculable: true,
             align: 'right',
             itemWidth: 16,

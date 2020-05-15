@@ -1,13 +1,14 @@
 .bg{
     width: 100%;
-    height: 304px;
+    height: 295px;
     background-image: url('./../../../../assets/background/left-pie-chart.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    // margin-bottom:15px;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .right-bar{
-    height: 150px;
-    width: 100%;
+    // height: 150px;
+    // width: 100%;
 }

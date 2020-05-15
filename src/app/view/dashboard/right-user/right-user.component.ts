@@ -12,7 +12,6 @@ export class RightUserComponent implements OnInit {
     
   chartOption: any
   echartsIntance:any
-
   dataList = []
   options: Object = {}
   constructor(
@@ -26,8 +25,13 @@ export class RightUserComponent implements OnInit {
     forkJoin(this.dashboardService.getScaleByAge(), this.dashboardService.getScaleByGender()).subscribe((res) => {
           
           if(res[0].data.length){
-              this.dataList = res[0].data.map(item => {
+              this.dataList = res[0].data.map((item, idx) => {
                   item.value = parseInt(item.value)
+                  if(idx + 1 == res[0].data.length){
+                      item.name = item.name.split('-')[0] + '岁以上'
+                  } else {
+                      item.name = item.name + '岁'
+                  }
                   return item
               })
           }
@@ -55,7 +59,6 @@ export class RightUserComponent implements OnInit {
     this.chartOption = this.options;
     this.chartOption.series.length&&this.chartOption.series.forEach(item => {
          item.data =  this.dataList;
-         
     });
     if (this.echartsIntance) {
       this.echartsIntance.clear();
@@ -68,18 +71,25 @@ export class RightUserComponent implements OnInit {
         trigger: 'item',
         formatter: '{a} <br/>{b} : {c} ({d}%)'
       },
+      grid:{
+        bottom: 0
+      },
       legend:{
         type:'plain',
         show: true,
         orient: 'vertical',
         align: 'left',
         left: '10%',
-        bottom: '25%',
+        bottom: 10,
         itemWidth: 8,
         itemHeight: 8,
         icon: 'circle',
+        
         textStyle: {
-          color:['#F57E7E', '#FFB647', '#50D5A9', '#2D99FF', '#4766FF']
+          // color:['#F57E7E', '#FFB647', '#50D5A9', '#2D99FF', '#4766FF']
+          color: this.dataList.map( item => {
+            return item.color
+          })
         }
       },
       // visualMap: {
@@ -98,7 +108,9 @@ export class RightUserComponent implements OnInit {
           center: ['50%', '50%'],
           data: this.dataList,
           roseType: 'radius',
-          left: '30%',
+          height: 260,
+          left: '32%',
+          top:'5%',
           label: {
             normal: {
               textStyle: {
@@ -106,9 +118,9 @@ export class RightUserComponent implements OnInit {
                 normal: {
                   color: (params) => {
                     //自定义颜色
-                    let colorList = [
-                      '#F57E7E', '#FFB647', '#50D5A9', '#2D99FF', '#4766FF'
-                    ]
+                    let colorList = this.dataList.map( item => {
+                      return item.color
+                    })
                     return colorList[params.dataIndex]
                   },
                 }
@@ -122,9 +134,9 @@ export class RightUserComponent implements OnInit {
               // },
               color: (params) => {
                 //自定义颜色
-                let colorList = [
-                  '#F57E7E', '#FFB647', '#50D5A9', '#2D99FF', '#4766FF'
-                ]
+                let colorList = this.dataList.map( item => {
+                  return item.color
+                })
                 return colorList[params.dataIndex]
               },
               smooth: 0.2,
@@ -135,9 +147,9 @@ export class RightUserComponent implements OnInit {
           itemStyle: {
             color:(params)=> {
               //自定义颜色
-              let colorList = [          
-                    '#F57E7E','#FFB647','#50D5A9','#2D99FF','#4766FF'
-                  ];
+              let colorList = this.dataList.map( item => {
+                return item.color
+              })
                   return colorList[params.dataIndex]
             },
           },

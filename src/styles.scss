@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+@media screen and (max-width: 961px) {
+    body{
+        zoom: 0.572;
+        -moz-transform: scale(0.572);
+        -moz-transform-origin: 0 0;
+        
+    }
+}
 div,p {
     margin: 0;
 }
@@ -17,13 +26,15 @@ p, span{
     flex-wrap: nowrap;
 }
 .green-title{
-    font-size:16px;
+    font-size: 16px;
     font-family:HiraginoSansGB-W6,HiraginoSansGB;
     font-weight:normal;
     color:rgba(69,245,230,1);
     line-height:50px;
     text-shadow:0px 2px 8px rgba(68,215,195,0.56);
-    margin: 0 16px
+    margin: 0 16px;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 .icon-circle{
     width:8px;

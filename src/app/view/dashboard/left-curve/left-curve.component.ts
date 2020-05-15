@@ -36,7 +36,7 @@ export class LeftCurveComponent implements OnInit {
     grid: {
       left: '3%',
       right: '4%',
-      bottom: '7%',
+      bottom: '12%',
       containLabel: true
     },
     xAxis: [

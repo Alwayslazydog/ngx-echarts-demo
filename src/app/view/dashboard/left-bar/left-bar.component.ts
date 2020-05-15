@@ -27,7 +27,7 @@ export class LeftBarComponent implements OnInit {
     grid: {
       left: '3%',
       right: '4%',
-      bottom: '3%',
+      bottom: '10%',
       containLabel: true
     },
     xAxis: [
@@ -109,12 +109,13 @@ export class LeftBarComponent implements OnInit {
     // this.dataList = [28, 16, 33, 70, 100, 40, 30, 28, 16, 33, 70, 100]
     this.dashboardService.getOrderByPreMonth().subscribe(res => {
         this.dataList = res.data
+        this.setChartData()
     })
     this.initDateArr()
-    this.setChartData()
   }
   initDateArr(){
     let month = new Date().getMonth()
+    month = month > 1 ? month - 1 : 12
     let [arr, result] = [['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],[]]
     result.push(arr[month])
     for (let i = 0; i < arr.length - 1 ; i++) {
@@ -134,6 +135,7 @@ export class LeftBarComponent implements OnInit {
     this.chartOption = this.options;
     this.chartOption.series.forEach(item => {
          item.data =  this.dataList;
+         console.log(item)
     });
     if (this.echartsIntance) {
       this.echartsIntance.clear();

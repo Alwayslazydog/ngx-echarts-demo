@@ -45,7 +45,7 @@ export class DashboardService {
   ** Get Guangdong checkin data in latest 7 days
   */
   getCheckinCase(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + `data/getCheckInCase`, this.httpOptions)
+    return this.http.get<any>(this.baseUrl + `data/getDefaultCheckInCase`, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -57,7 +57,7 @@ export class DashboardService {
   ** Get Guangdong checkin detail info
   */
   getGDCheckinDetail(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + `data/getHousingDetailJoinInfo`, this.httpOptions)
+    return this.http.get<any>(this.baseUrl + `data/getDefaultHousingDetailJoinInfo`, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -69,7 +69,7 @@ export class DashboardService {
   ** Get Guangdong checkin detail info
   */
   getScaleByGender(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + `data1/getDataSex`, this.httpOptions)
+    return this.http.get<any>(this.baseUrl + `data/getDataSex`, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -81,7 +81,7 @@ export class DashboardService {
   ** Get Guangdong checkin detail info
   */
   getScaleByAge(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + `data1/getDataAge`, this.httpOptions)
+    return this.http.get<any>(this.baseUrl + `data/getDataAge`, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -93,7 +93,7 @@ export class DashboardService {
   ** Get Guangdong order data pre month nearly 12
   */
   getOrderByPreMonth(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + `data/getOrderNum`, this.httpOptions)
+    return this.http.get<any>(this.baseUrl + `data/getDefaultOrderNum`, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -105,7 +105,7 @@ export class DashboardService {
   ** Get Guangdong check in  data yesterday
   */
   getCheckinByYesterday(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + `data1/getDataCity`, this.httpOptions)
+    return this.http.get<any>(this.baseUrl + `data/getDataCity`, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -117,7 +117,7 @@ export class DashboardService {
   ** Get check in data by near 12 month
   */
   getCheckinByNearYear(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + `data1/getDataHousing`, this.httpOptions)
+    return this.http.get<any>(this.baseUrl + `data/getDataHousing`, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -129,7 +129,7 @@ export class DashboardService {
   ** Get GD housing number by cities
   */
   getHousingNumByCities(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + `data/getHousingDetailNum`, this.httpOptions)
+    return this.http.get<any>(this.baseUrl + `data/getDefaultHousingDetailNum`, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -141,7 +141,7 @@ export class DashboardService {
   ** Get GD housing number by cities
   */
   getOverView(): Observable<any> {
-    return this.http.get<any>(this.baseUrl + `data/getOverview`, this.httpOptions)
+    return this.http.get<any>(this.baseUrl + `data/getDefaultOverview`, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)

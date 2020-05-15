@@ -1,18 +1,18 @@
-<div>
+<div class="dashboard">
     <nav-header></nav-header>
-    <div class="flex-row nowrap">
+    <div class="flex-row nowrap box">
         <div class="left">
-            <left-pie></left-pie>
-            <left-curve></left-curve>
-            <left-bar></left-bar>
+            <div class="flex-grow"><left-pie class="flex-grow"></left-pie></div>
+            <div class="flex-grow"><left-curve class="flex-grow"></left-curve></div>
+            <div class="flex-grow"><left-bar class="flex-grow"></left-bar></div>
         </div>
         <div class="middle">
-            <mid-map></mid-map>
-            <app-active-date></app-active-date>
+            <div class="flex-grow"><mid-map></mid-map></div>
+            <div class="flex-grow"><app-active-date class="flex-grow flex-shrink"></app-active-date></div>
         </div>
         <div class="right">
-            <app-right-local></app-right-local>
-            <app-right-user></app-right-user>
+            <div class="flex-grow"><app-right-local class="flex-grow"></app-right-local></div>
+            <div class="flex-grow"><app-right-user class="flex-grow"></app-right-user></div>
         </div>
     </div>
 </div>

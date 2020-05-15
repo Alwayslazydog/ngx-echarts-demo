@@ -20,13 +20,17 @@ export class ActiveDateComponent implements OnInit {
           type: 'piecewise',
           orient: 'horizontal',
           left: 'center',
-          top: 65,
+          top: 20,
           textStyle: {
               color: '#B8FFF5'
           }
       },
+      grid:{
+        height:240,
+        top: 0
+      },
       calendar: {
-          top: 120,
+          top: 80,
           left: 30,
           right: 30,
           cellSize: ['auto', 13],

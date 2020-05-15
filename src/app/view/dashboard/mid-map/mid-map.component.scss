@@ -1,7 +1,8 @@
 .title{
     margin-top: 25px;
     width: 100%;
-    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 .green-title{
     margin: 0;
@@ -13,6 +14,9 @@
     border-bottom-color: linear-gradient(90deg,rgba(68,215,195,.4) 0%,rgba(68,215,195,1) 51%,rgba(68,215,195,0.16) 100%);
     display: block;
     // opacity:0.4;
+}
+.map{
+    // height: 583px;
 }
 .bg{
     margin: 0 16px;
@@ -28,7 +32,7 @@
 
 .item-text{
     width:56px;
-    font-size:14px;
+    font-size:16px;
     font-family:HiraginoSansGB-W3,HiraginoSansGB;
     font-weight:normal;
     color:rgba(92,255,233,1);
@@ -39,7 +43,7 @@
 }
 .item-data{
     width:91px;
-    font-size:26px;
+    font-size:1.625rem;
     font-family:DIN-Medium,DIN;
     font-weight:500;
     color:rgba(68,215,195,1);

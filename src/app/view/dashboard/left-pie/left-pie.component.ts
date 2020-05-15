@@ -23,7 +23,7 @@ export class LeftPieComponent implements OnInit {
     },
     series: [
       {
-        name: '广东省民宿接入概况',
+        name: '自助入住与前台接待占比',
         type: 'pie',
         radius: '60%',
         center: ['50%', '50%'],
