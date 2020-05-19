@@ -12,7 +12,7 @@
             <div class="rank" [ngClass]="{'text-green': idx<2}">{{idx + 1}}</div>
             <div class="city flex-row" [ngClass]="{'text-green': idx<2}">
                 <div>{{item.name}} </div>
-                <div class="rank-item flex-row" style="margin-left:10px" *ngIf="item.rank">
+                <div class="rank-item flex-row" style="margin-left:10px" *ngIf="item.rank != 0">
                     <span [ngClass]="item.rank > 0 ? 'up-arrow label-green' : 'down-arrow label-red'"></span>
                     <span>{{item.rank > 0 ? item.rank : item.rank * -1}}</span>
                 </div>
