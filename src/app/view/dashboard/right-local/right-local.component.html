@@ -14,7 +14,7 @@
                 <div>{{item.name}} </div>
                 <div class="rank-item flex-row" style="margin-left:10px" *ngIf="item.rank != 0">
                     <span [ngClass]="item.rank > 0 ? 'up-arrow label-green' : 'down-arrow label-red'"></span>
-                    <span>{{item.rank > 0 ? item.rank : item.rank * -1}}</span>
+                    <span  [ngClass]="item.rank > 0 ? 'label-green' : 'label-red'">{{item.rank > 0 ? item.rank : item.rank * -1}}</span>
                 </div>
             </div>
             <div [ngClass]="{'text-green': idx<2}" class="flex-row flex-end flex-grow"><div class="value">{{item.value}}</div></div>
